@@ -1,0 +1,79 @@
+@import "constants";
+
+@calculator-size: 600px;
+
+.calculator {
+    width: @calculator-size;
+    height: @calculator-size;
+    margin: 30px auto;
+    padding: 30px;
+
+    background-color: @widget-color;
+    box-shadow: @widget-shadow;
+    border: @widget-border;
+    border-radius: @widget-radius;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    .expression {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 1em;
+
+        flex-basis: 30px;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        text-align: right;
+        border: 1px solid darken(@white-color, 10%);
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    .controls {
+        width: 100%;
+        flex: 1;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .group-controls {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .control {
+                cursor: pointer;
+                user-select: none;
+
+                height: 100%;
+                flex-basis: 25%;
+                flex: 1;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                color: @white-color;
+                border: 1px solid darken(@secondary-color, 10%);
+                background-color: @secondary-color;
+    
+                font-size: 2em;
+                font-weight: bold;
+
+                &:hover,
+                &:focus {
+                    background-color: @primary-color;
+                    color: @black-color;
+                }
+            }
+        }
+    }
+}

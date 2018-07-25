@@ -1,0 +1,28 @@
+<div class="calculator">
+    <div class="expression">{{expression}}</div>
+    <div class="controls">
+        <div class="group-controls">
+            <div class="control" ng-click="reset()">ac</div>
+            <div class="control" ng-click="toggleSign()">+/-</div>
+            <div class="control" ng-click="percentage()">%</div>
+            <div class="control" ng-click="setAction('divide')">/</div>
+        </div>
+        <div class="group-controls">
+            <div class="control" ng-click="updateExpression(c)" ng-repeat="c in [7, 8, 9]">{{::c}}</div>
+            <div class="control" ng-click="setAction('multiply')">*</div>
+        </div>
+        <div class="group-controls">
+            <div class="control" ng-click="updateExpression(c)" ng-repeat="c in [4, 5, 6]">{{::c}}</div>
+            <div class="control" ng-click="setAction('substract')">-</div>
+        </div>
+        <div class="group-controls">
+            <div class="control" ng-click="updateExpression(c)" ng-repeat="c in [1, 2, 3]">{{::c}}</div>
+            <div class="control" ng-click="setAction('sum')">+</div>
+        </div>
+        <div class="group-controls">
+            <div class="control" ng-click="updateExpression(c)">0</div>
+            <div class="control" ng-click="updateExpression(c)">,</div>
+            <div class="control" ng-click="calculate()">=</div>
+        </div>
+    </div>
+</div>
